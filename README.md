@@ -4,6 +4,6 @@ This project demonstrates a basic Tellor use case. It pairs with a walkthrough f
 
 
 for installing bleeding edge telliot:
-```python
+```bash
 pip install git+https://github.com/tellor-io/telliot-feed-examples.git@main#egg=telliot_feed_examples && pip install git+https://github.com/tellor-io/telliot-core.git@main#egg=telliot_core 
 ```

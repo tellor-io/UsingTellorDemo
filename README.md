@@ -1,15 +1,3 @@
-# Basic Sample Hardhat Project
+# TellorHarmonyDemo
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+This project demonstrates a basic Tellor use case. It pairs with a walkthrough for integrating Tellor on the Harmony network, but can be applied to any EVM -compatible chain.

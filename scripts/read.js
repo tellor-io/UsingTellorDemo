@@ -3,16 +3,9 @@ const { ethers } = require("hardhat");
 async function main() {
 
     //our contract address
-    const TELLOR_DEMO = "0x3776cd110D9a013049baD65F8454650443f3f9A7"
+    const TELLOR_DEMO = ... //fill in here after deployment
 
-    //get contract at
-    let tellorDemo = await ethers.getContractAt("TellorHarmonyDemo", TELLOR_DEMO)
-
-    //read the data
-    let price = BigInt(await tellorDemo.getMkrUsdSpotPrice()) / BigInt(1E18)
-
-    //print to console
-    console.log(Number(price))
+    // 
     
   }
   

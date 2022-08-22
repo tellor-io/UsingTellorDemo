@@ -4,19 +4,15 @@ const { ethers } = require("hardhat");
 
 async function main() {
 
-  const TELLOR_ADDRESS = "0xb32e05df1f11b1f0e1de2a35f4d99393eb86ff8b" //tellor on harmony
+  const TELLOR_ADDRESS = "0x88dF592F8eb5D7Bd38bFeF7dEb0fBc02cf3778a0" //tellor on rinkeby
 
-  //create our contract object
-  const TellorDemo = await ethers.getContractFactory("TellorHarmonyDemo")
-  let tellorDemo = await TellorDemo.deploy(TELLOR_ADDRESS)
+  //build our contract factory
 
-  //deploy the contract
-  await tellorDemo.deployed()
+  //deploy out contract
 
-  //print the address to the console
-  console.log(tellorDemo.address)
+  //await that its deployed
 
-
+  //print out the address
 
 }
 

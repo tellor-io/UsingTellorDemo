@@ -5,7 +5,13 @@ async function main() {
     //our contract address
     const TELLOR_DEMO = ... //fill in here after deployment
 
-    // 
+    //connecting to our contract
+    let demo = await ethers.getContractAt("UsingTellorDemo", TELLOR_DEMO)
+
+    //send tip!
+    let tx = await demo.tip()
+
+    console.log(tx.hash)
     
   }
   

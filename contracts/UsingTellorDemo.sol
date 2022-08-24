@@ -2,8 +2,7 @@
 pragma solidity >0.8.3;
 
 //import using tellor from npm package
-import ...;
-import "usingtellor/contracts/interface/ITellor.sol";
+import "...";
 
 contract UsingTellorDemo is ... {
 
@@ -24,12 +23,6 @@ contract UsingTellorDemo is ... {
 
         //decode our data
 
-    }
-
-    // make sure to use the TRB faucet! https://twitter.com/trbfaucet
-    function tip() external {
-
-        //connect to tellor and send tip
     }
     
 }

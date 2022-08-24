@@ -1,19 +1,21 @@
-
 const hre = require("hardhat");
 const { ethers } = require("hardhat");
 
 async function main() {
 
-  const TELLOR_ADDRESS = "0x88dF592F8eb5D7Bd38bFeF7dEb0fBc02cf3778a0" //tellor on rinkeby
+  const TELLOR_ADDRESS = "0x18431fd88adF138e8b979A7246eb58EA7126ea16" //tellorflex on rinkeby
 
   //build our contract factory
+  let UsingTellorDemo = await ethers.getContractFactory("UsingTellorDemo")
 
   //deploy out contract
+  let usingTellorDemo = await UsingTellorDemo.deploy(TELLOR_ADDRESS)
 
   //await that its deployed
+  await usingTellorDemo.deployed()
 
   //print out the address
-
+  console.log(usingTellorDemo.address)
 }
 
 // We recommend this pattern to be able to use async/await everywhere

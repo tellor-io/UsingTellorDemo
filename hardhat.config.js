@@ -24,9 +24,9 @@ module.exports = {
     hardhat: {
       hardfork: process.env.CODE_COVERAGE ? "berlin" : "london",
       initialBaseFeePerGas: 0,
-      allowUnlimitedContractSize: true
+      allowUnlimitedContractSize: true,
     },
-    harmony: {
+    rinkeby: {
          url: `${process.env.NODE_URL}`,
          accounts: [process.env.PRIVATE_KEY],
          gas: 10000000 ,

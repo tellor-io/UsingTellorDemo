@@ -3,7 +3,7 @@ const { ethers } = require("hardhat");
 
 async function main() {
 
-  const TELLOR_ADDRESS = "0x18431fd88adF138e8b979A7246eb58EA7126ea16" //tellorflex on rinkeby
+  const TELLOR_ADDRESS = "0x095869B6aAAe04422C2bdc6f185C1f2Aba41EA6B" //tellor on rinkeby
 
   //build our contract factory
   let UsingTellorDemo = await ethers.getContractFactory("UsingTellorDemo")

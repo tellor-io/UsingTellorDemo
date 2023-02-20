@@ -2,6 +2,7 @@
   "name": "hardhat-project",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-etherscan": "^3.1.6",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
     "chai": "^4.3.6",
     "ethereum-waffle": "^3.4.4",
@@ -9,7 +10,8 @@
     "hardhat": "^2.10.2"
   },
   "dependencies": {
+    "@ericxstone/hardhat-blockscout-verify": "^1.0.0",
     "dotenv": "^16.0.1",
-    "usingtellor": "^4.0.7"
+    "usingtellor": "^5.0.0"
   }
 }

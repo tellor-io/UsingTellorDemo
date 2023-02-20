@@ -3,7 +3,7 @@ const { ethers } = require("hardhat");
 
 async function main() {
 
-  const TELLOR_ADDRESS = "0x095869B6aAAe04422C2bdc6f185C1f2Aba41EA6B" //tellor on rinkeby
+  const TELLOR_ADDRESS = "0xD9157453E2668B2fc45b7A803D3FEF3642430cC0" //oracle address
 
   //build our contract factory
   let UsingTellorDemo = await ethers.getContractFactory("UsingTellorDemo")
@@ -16,6 +16,20 @@ async function main() {
 
   //print out the address
   console.log(usingTellorDemo.address)
+
+  if (hre.network.name == "chiado") {
+    await hre.run("blockscout-verify", {
+      filePath: "contracts/UsingTellorDemo.sol",
+      address: usingTellorDemo.address
+  })
+} else {
+    await hre.run("verify:verify", {
+      address: usingTellorDemo.address,
+      constructorArguments: [
+        TELLOR_ADDRESS
+      ],
+    });
+  }
 }
 
 // We recommend this pattern to be able to use async/await everywhere

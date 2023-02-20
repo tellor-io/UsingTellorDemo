@@ -430,8 +430,10 @@ interface ITellor {
         uint256 _interval,
         uint256 _window,
         uint256 _priceThreshold,
-        bytes memory _queryData
-    ) external;
+        uint256 _rewardIncreasePerSecond,
+        bytes calldata _queryData,
+        uint256 _amount
+    ) external returns (bytes32 _feedId);
 
     function tellor() external view returns (address);
 

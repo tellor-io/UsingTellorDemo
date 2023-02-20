@@ -2,18 +2,17 @@
 pragma solidity >0.8.3;
 
 //import using tellor from npm package
-import "...";
+import "usingtellor/contracts/UsingTellor.sol";
 
-contract UsingTellorDemo is ... {
+contract UsingTellorDemo is UsingTellor {
 
-    // REF: https://github.com/tellor-io/dataSpecs/blob/main/types/NumericApiResponse.md
-    
-    string url = "https://rickandmortyapi.com/api/episode"; //url of API
-    string parseArgs = "info, count"; //arguments we need to parse the JSON response
+    uint256 public btcPrice;
 
-    constructor(...) ... {}
+    constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) {}
 
-    function readValue() external view returns (...) {
+    function setBtcPrice() external {
+
+        // REF: https://github.com/tellor-io/dataSpecs/blob/main/types/SpotPrice.md
 
         //build our queryData
 
@@ -21,8 +20,9 @@ contract UsingTellorDemo is ... {
 
         //get our data
 
+        //safety checks
+
         //decode our data
 
-    }
-    
+    }    
 }

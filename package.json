@@ -1,5 +1,5 @@
 {
-  "name": "hardhat-project",
+  "name": "using-tellor-demo",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
     "@nomiclabs/hardhat-etherscan": "^3.1.6",

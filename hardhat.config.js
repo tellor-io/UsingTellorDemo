@@ -1,10 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
-require("@ericxstone/hardhat-blockscout-verify");
-require("@nomiclabs/hardhat-etherscan");
 require("dotenv").config()
-
-let SOLIDITY_VERSION = require("@ericxstone/hardhat-blockscout-verify").SOLIDITY_VERSION;
-let EVM_VERSION = require("@ericxstone/hardhat-blockscout-verify").EVM_VERSION;
 
 
 // This is a sample Hardhat task. To learn how to create your own go to
@@ -32,33 +27,11 @@ module.exports = {
       initialBaseFeePerGas: 0,
       allowUnlimitedContractSize: true,
     },
-    goerli: {
-      url: process.env.NODE_URL,
-      accounts: [process.env.PRIVATE_KEY],
-      gas: 10000000,
-      gasPrice: 40000000000
-    },
     chiado: {
       url: "https://rpc.chiadochain.net",
       accounts: [process.env.PRIVATE_KEY],
       gas: 10000000,
       gasPrice: 40000000000
     }
-  },
-  etherscan: {
-    // Your API key for Etherscan
-    // Obtain one at https://etherscan.io/
-    apiKey: process.env.ETHERSCAN_API_KEY
-  },
-  blockscoutVerify: {
-    blockscoutURL: "https://blockscout.com/gnosis/chiado",
-    contracts: {
-      "UsingTellorDemo": {
-        compilerVersion: SOLIDITY_VERSION.SOLIDITY_V_8_4, // checkout enum SOLIDITY_VERSION
-        optimization: true,
-        evmVersion: EVM_VERSION.EVM_LONDON, // checkout enum SOLIDITY_VERSION
-        optimizationRuns: 0,
-      },
-    },
   },
 }

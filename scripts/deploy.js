@@ -17,19 +17,6 @@ async function main() {
   //print out the address
   console.log(usingTellorDemo.address)
 
-  if (hre.network.name == "chiado") {
-    await hre.run("blockscout-verify", {
-      filePath: "contracts/UsingTellorDemo.sol",
-      address: usingTellorDemo.address
-  })
-} else {
-    await hre.run("verify:verify", {
-      address: usingTellorDemo.address,
-      constructorArguments: [
-        TELLOR_ADDRESS
-      ],
-    });
-  }
 }
 
 // We recommend this pattern to be able to use async/await everywhere

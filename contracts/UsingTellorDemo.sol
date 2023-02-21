@@ -2,7 +2,7 @@
 pragma solidity >0.8.3;
 
 //import using tellor from npm package
-import "usingtellor/contracts/UsingTellor.sol";
+
 
 contract UsingTellorDemo is UsingTellor {
 
@@ -21,8 +21,11 @@ contract UsingTellorDemo is UsingTellor {
         //get our data
 
         //safety checks
+        require(, "we never got a submission on this query id");
+        require(, "data hasn't been updated to par");
 
         //decode our data
+
 
     }    
 }

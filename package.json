@@ -10,7 +10,6 @@
     "hardhat": "^2.10.2"
   },
   "dependencies": {
-    "@ericxstone/hardhat-blockscout-verify": "^1.0.0",
     "dotenv": "^16.0.1",
     "usingtellor": "^5.0.0"
   }

@@ -2,13 +2,13 @@
 pragma solidity >0.8.3;
 
 //import using tellor from npm package
-
+import "usingtellor/contracts/UsingTellor.sol";
 
 contract UsingTellorDemo is UsingTellor {
 
     uint256 public btcPrice;
 
-    constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) {}
+    constructor(...) UsingTellor(...) {}
 
     function setBtcPrice() external {
 

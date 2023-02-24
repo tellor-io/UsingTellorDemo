@@ -32,6 +32,14 @@ module.exports = {
       accounts: [process.env.PRIVATE_KEY],
       gas: 10000000,
       gasPrice: 40000000000
+    },
+    goerli: {
+      url: process.env.NODE_URL,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    mumbai: {
+      url: process.env.NODE_URL,
+      accounts: [process.env.PRIVATE_KEY],
     }
   },
 }

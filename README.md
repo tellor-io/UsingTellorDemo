@@ -17,14 +17,15 @@
 
 <b>The Tellor oracle</b> is a decentralized oracle. It provides an option for contracts to interact securely with and obtain data from off-chain.
 
-This project demonstrates a basic Tellor use case. It pairs with a walkthrough for reading the BTC/USD feed with Tellor...it can be applied to any EVM-compatible chain! This repo uses Tellor by using Ethers.js, Waffle, and Hardhat.
+This project demonstrates a basic Tellor use case. It pairs with a walkthrough for reading the BTC/USD feed with Tellor...it can be applied to any EVM-compatible chain!
+
 
 For more in-depth information about Tellor, check out our [documentation](https://docs.tellor.io/tellor/).
 
 Quick references are included below:
 
 # Implement Tellor into your project
-This repo already includes the [usingTellor](https://github.com/tellor-io/usingtellor) package.
+This repo already includes the [usingTellor](https://github.com/tellor-io/usingtellor) package. You can follow along with [this video tutorial](https://www.youtube.com/watch?v=CBU3hOb-xHM&t=1s) to learn how to complete the setBtcPrice function and read the btc price from tellor.
 
 ## How to use
 #### 1. Clone project and install dependencies
@@ -225,18 +226,6 @@ function submitValue(bytes32 _queryId, bytes calldata _value, uint256 _nonce, by
 function beginDispute(bytes32 _queryId, uint256 _timestamp) external;
 ```
 
-#### 5. To run tests:
-
-```bash
-npx hardhat test
-```
-
-#### 6. Deployment:
-Just run hardhat run with desired Network
-
-```bash
-npx hardhat run --network <your-network> scripts/deploy.js
-```
 
 
 #### How to Contribute<a name="how2contribute"> </a>  
